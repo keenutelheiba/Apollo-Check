@@ -6,7 +6,6 @@ import datetime
 
 # HOST MODEL
 class Host(models.Model):
-    id = models.AutoField
     host_name = models.CharField(max_length=50)
     host_email = models.EmailField(blank=True, null=True)
     host_phone = models.IntegerField()
@@ -22,7 +21,6 @@ class Host(models.Model):
 
 # MEETING MODEL
 class Meeting(models.Model):
-    id = models.AutoField
     visitor_name = models.CharField(max_length=50)
     visitor_email = models.EmailField(blank=True, null=True)
     visitor_phone = models.IntegerField()
@@ -32,5 +30,5 @@ class Meeting(models.Model):
     time_out = models.TimeField(blank=True, null=True)
 
     def __str__(self):
-        return str(self.id)+ ' : ' + str(self.visitor_name)
+        return str(self.id) + ' : ' + str(self.visitor_name)
 
